@@ -1,0 +1,38 @@
+.loader {
+
+	position: absolute;
+	top: 10%;
+	left: 48%;
+	z-index: 999999999999;
+	height: 3em;
+	width: 3em;
+	color: #f00;
+	outline: 2px solid #111;
+	animation: loader--spinning 1.5s infinite ease;
+
+}
+.loader::after {
+	content: '';
+	display: block;
+	height: inherit;
+	width: inherit;
+	outline: inherit;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+}
+.square::after {
+	animation-name: loader--asynchronous-spinning;
+	outline-color: #f00;
+}
+@keyframes loader--spinning {
+	0% {transform: rotate(0deg) scale(1.0);}
+	50% { transform: rotate(45deg) scale(0.5);outline-color: #0ff; }
+	100% { transform: rotate(90deg) scale(1.0);outline-color: #ff0; }
+}
+
+@keyframes loader--asynchronous-spinning {
+	0% {transform: rotate(0deg) scale(1.0);}
+	50% { transform: rotate(90deg) scale(1.35);outline-color: #ffe250; }
+	100% { transform: rotate(180deg) scale(1.0);outline-color: #005a74; }
+}
