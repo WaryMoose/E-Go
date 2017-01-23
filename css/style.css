@@ -77,5 +77,5 @@ ul li:hover i {
 section {
 	opacity: 0.01;
 	transform: scale(0.75);
-	transition: opacity 2s ease, transform 1.75s ease;
+	transition: opacity 2s ease, transform 1.75s ease-in;
 }
