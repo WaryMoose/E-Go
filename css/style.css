@@ -72,8 +72,10 @@ ul li:hover i {
 }
 .opaque {
 	opacity: 1.0;
+	transform: scale(1.0);
 }
 section {
 	opacity: 0.01;
-	transition: opacity 1.75s ease;
+	transform: scale(0.75);
+	transition: opacity 2s ease, transform 1.75s ease;
 }
